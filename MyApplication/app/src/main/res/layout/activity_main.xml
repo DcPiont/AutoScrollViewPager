@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dcpiont.myapplication.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="424dp"
+        android:id="@+id/relativeLayout">
+
+        <POJO.MyViewpager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+        </POJO.MyViewpager>
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_below="@id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="-40px"
+            android:gravity="right"
+            android:orientation="horizontal">
+        </LinearLayout>
+        
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:alpha="0"/>
+
+            <Button
+                android:id="@+id/btnCenter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:alpha="0"/>
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:alpha="0"/>
+
+            
+        </LinearLayout>-->
+    </RelativeLayout>
+
+    <Switch
+        android:text="手势控制开关"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_mode"
+        tools:layout_editor_absoluteX="0dp"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <Switch
+        android:text="自动滚动控制开关"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_mode2"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintLeft_toRightOf="@id/switch_mode"/>
+
+</android.support.constraint.ConstraintLayout>
